@@ -3143,10 +3143,7 @@ _PyLong_Add(PyLongObject *a, PyLongObject *b)
             z = x_sub(b, a);
     }
     else {
-        if (Py_SIZE(b) < 0)
-            z = x_sub(a, b);
-        else
-            z = x_add(a, b);
+        z = x_sub(a, b);
     }
     return (PyObject *)z;
 }
